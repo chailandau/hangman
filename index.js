@@ -59,6 +59,7 @@ let gameMechanics = () => {
           if (!correctGuesses.includes(guess) && !letters.includes(guess)) {
             guessesLeft--
           };
+          // If special character, tell user it can't be
         } else if (specialCharacter) {
           console.log("\nIt needs to be a letter from A-Z.")
         } 
@@ -66,6 +67,7 @@ let gameMechanics = () => {
 
       guessMechanics();
 
+      // Builds hangman
       let hangTheMan = () => {
         if (guessesLeft === 6) {
           console.log(`\n${guessesLeft} guesses left.`)
@@ -95,18 +97,21 @@ let gameMechanics = () => {
     };
 
     let afterEachRound = () => {
+      // If they're out of guesses, they're out
       if (numberOfRemainingLetters > 0) {
         console.log(answerArr.join(" "));
         console.log(`\n\nCongrats, you killed the guy.\nThe word was: ${randomWord}.\n`)
       } else {
+        // Otherwise, they win
         console.log(answerArr.join(" "));
         console.log(`\n\nThe guy gets to live!\nYou got it, it was: ${randomWord}.\n`)  
         roundsWon++;
       };
+      // Add to how many rounds they completed and tell them how many they won
       totalRounds++;
       console.log(`\n${roundsWon} rounds won out of ${totalRounds} rounds.\n`)
     };
-    
+  
     afterEachRound();
   
   };
