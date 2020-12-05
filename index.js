@@ -87,23 +87,18 @@ let gameMechanics = () => {
         } else if (guessesLeft === 5) {
           console.log(`\n O \n\n\n\n`);
           console.log(`${guessesLeft} guesses left.`);
-          console.log(guessedLetters);
         } else if (guessesLeft === 4) {
           console.log(`\n O \n | \n | \n\n`);
           console.log(`${guessesLeft} guesses left.`);
-          console.log(guessedLetters);
         } else if (guessesLeft === 3) {
           console.log(`\n O \n/| \n | \n\n`);
           console.log(`${guessesLeft} guesses left.`);
-          console.log(guessedLetters);
         } else if (guessesLeft === 2) {
           console.log(`\n O \n/|\\ \n |\n\n`);
           console.log(`${guessesLeft} guesses left.`);
-          console.log(guessedLetters);
         } else if (guessesLeft === 1) {
           console.log(`\n O \n/|\\ \n |\n/\n`);
           console.log(`${guessesLeft} guesses left.`);
-          console.log(guessedLetters);
         } else if (guessesLeft === 0) {
           console.log(`\n O \n/|\\ \n |\n/ \\\n`);
           console.log(`${guessesLeft} guesses left.`);
