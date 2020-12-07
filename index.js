@@ -37,7 +37,7 @@ let gameMechanics = () => {
       console.log(answerArr.join(" "));
 
       let guessALetter = prompt.question("\nGuess a letter: ");
-      let guess = guessALetter.toLowerCase()[0];
+      let guess = guessALetter.toLowerCase()[0] || " ";
 
       // Make sure characters are a-z
       let aToZ = /[a-zA-Z]/.test(guess);
@@ -69,8 +69,6 @@ let gameMechanics = () => {
           // If special character, tell user it can't be
         } else if (specialCharacter) {
           console.log("\nIt needs to be a letter from A-Z.");
-        } else if (blankSpace) {
-          console.log("\nPlease enter a letter.");
         }
 
         if (!guessedLetters.includes(guess)) {
